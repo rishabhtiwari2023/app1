@@ -1,0 +1,37 @@
+.navBar {
+
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 3em;
+    z-index: 10;
+}
+
+
+/* 
+.navBarLeft,
+.navBarRight {
+    display: flex;
+    align-items: right;
+    height: 100%;
+    padding: .3em;
+    box-sizing: border-box;
+
+}
+
+.navBarRight {
+    padding-left: 15em;
+    align-items: end;
+    width: fit-content;
+    justify-content: flex-end;
+
+} */
+.navBarRight{
+    align-items: right;margin-right: 2em;
+    direction: rtl;
+}
+.navBarLeft{direction: ltr;}

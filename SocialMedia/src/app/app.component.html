@@ -1,0 +1,15 @@
+<div class="navBar">
+  <div class="navBarContent">
+    <!-- <div  class="navBarLeft">Flipkart</div> -->
+    <div class="navBarRight">
+      <button *ngIf="!loggedIn()" (click)=" OnLogInClick()">Login</button>
+    </div>
+    <div class="navBarRight">
+      <button *ngIf="loggedIn()" (click)=" OnLogOutClick()">Logout</button>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-home></app-home> -->
+<!-- <app-profile [show]="loggedIn()"></app-profile> -->
+<!-- <app-email-verification></app-email-verification> -->

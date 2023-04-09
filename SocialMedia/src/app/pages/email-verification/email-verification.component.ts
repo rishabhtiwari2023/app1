@@ -1,0 +1,28 @@
+import { Component } from '@angular/core';
+import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
+import { Router } from '@angular/router'
+@Component({
+  selector: 'app-email-verification',
+  templateUrl: './email-verification.component.html',
+  styleUrls: ['./email-verification.component.css']
+})
+export class EmailVerificationComponent {
+  auth = new FirebaseTSAuth
+  constructor(private router: Router) {
+
+  }
+  ngOnInit(): void {
+    if (this.auth.isSignedIn() && (!this.auth.getAuth().currentUser?.emailVerified)) {
+      this.auth.sendVerificationEmail();
+      // alert("232")
+    }
+    else {
+      this.router.navigate([""]); 
+      // alert("el232")
+    }
+  }
+
+  onResendClick() {
+    this.auth.sendVerificationEmail();
+  }
+}
